@@ -1,0 +1,10 @@
+[package]
+name = "lab4inf"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+quick-xml = { version = "0.42.0", features = ["serialize"] }
+ron = "0.12.3"
+serde = { version = "1.0.229", features = ["derive"] }
+toml = "1.2.1"
