@@ -5,7 +5,14 @@ pub enum Value {
     Bool(bool),
     Str(String),
     Array(Vec<Value>),
-    KeyValue((String, Box<Value>)),
-    Table(Vec<(String, Box<Value>)>),
-    Empty(())
+    Table(Vec<(String, Value)>),
+    DateTime(String),
+}
+
+#[derive(Debug, Clone, PartialEq)]
+pub enum Statement {
+    KeyVal(Vec<String>, Value),
+    Table(Vec<String>),
+    ArrayTable(Vec<String>),
+    Empty,
 }
